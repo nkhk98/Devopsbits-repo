@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: '${BRANCH_NAME}', credentialsId: '958d9274-b20d-4187-bfcc-9bcc112956b7', url: 'https://github.com/nkhk98/Devopsbits-repo.git'
+                git branch: 'main', credentialsId: '958d9274-b20d-4187-bfcc-9bcc112956b7', url: 'https://github.com/nkhk98/Devopsbits-repo.git'
             }
         }
         stage('Build') {
