@@ -8,11 +8,17 @@ pipeline {
             }
         }
         stage('Build') {
-            steps {
-                sh 'echo "Building the application..."'
-                sh './main.sh' // Execute our sample script
-            }
-        }
+    		steps {
+        		script {
+            			try {
+                			sh './non_existent_script.sh'
+            			} catch (Exception e) {
+                			echo "Build failed: ${e}"
+                			error('Build failed!')
+            			}
+        		}
+    		}
+	}
         stage('Test') {
             steps {
                 sh 'echo "Running tests..."'
