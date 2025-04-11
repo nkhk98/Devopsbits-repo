@@ -1,1 +1,1 @@
-Hello from feature branch on XFCE!
+echo 'Hello from feature branch on XFCE!'
