@@ -8,21 +8,18 @@ pipeline {
             }
         }
         stage('Build') {
-    		steps {
-        		script {
-            			try {
-                			sh './non_existent_script.sh'
-            			} catch (Exception e) {
-                			echo "Build failed: ${e}"
-                			error('Build failed!')
-            			}
-        		}
-    		}
-	}
+            steps {
+                sh 'echo "Building the application..."'
+                sh 'echo "Simulating successful build"' // Simulate a successful build
+                // In a real scenario, replace the 'echo' with your actual build commands
+            }
+        }
         stage('Test') {
             steps {
                 sh 'echo "Running tests..."'
                 sh 'echo "No tests defined in this example"'
+                sh 'echo "Simulating successful tests"' // Simulate successful tests
+                // In a real scenario, replace the 'echo' with your actual test commands
             }
         }
         stage('Deploy to Staging') {
