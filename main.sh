@@ -1,2 +1,1 @@
-#!/bin/bash
-echo 'Hello, CI/CD on XFCE!'
+Hello from feature branch on XFCE!
