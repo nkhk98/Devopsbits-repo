@@ -1,2 +1,2 @@
 #!/bin/bash
-Hello, CI/CD on XFCE!
+echo 'Hello, CI/CD on XFCE!'
