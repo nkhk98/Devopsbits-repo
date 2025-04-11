@@ -8,6 +8,7 @@ pipeline {
             }
         }
         stage('Build') {
+            agent any
             steps {
                 sh 'echo "Building the application..."'
                 sh 'echo "Simulating successful build"' // Simulate a successful build
@@ -15,6 +16,7 @@ pipeline {
             }
         }
         stage('Test') {
+            agent any
             steps {
                 sh 'echo "Running tests..."'
                 sh 'echo "No tests defined in this example"'
